@@ -1,0 +1,23 @@
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.nav-link {
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 30px;
+    margin-left: 5rem;
+}
+
+.nav-link:hover{
+    color:#1e81b0;
+}
+.nav-lin:active{
+    color: #38b01e;
+}
+.nav-item .active{
+   background-color: #d1b200;
+}
