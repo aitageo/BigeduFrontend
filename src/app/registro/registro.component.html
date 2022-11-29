@@ -1,0 +1,62 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-md-6 mt-5">
+   <br>
+            <img src="../../assets/img/logo.jpg" width="500" height="300">
+            <div class="text-center">
+                <h2 class="section-heading ">Bigedu</h2>
+                <h3 class=" Mitexto">
+                    Educacion en Grande</h3>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <form class="mt-5 " id="contactForm">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-12">
+                        <h3>Registro</h3> <br>
+                        <div class="form-group">
+                            <label>Nickname:</label>
+                            <input class="form-control" id="Nickname" type="text" name="Nickname"
+                                placeholder="Nickname" required="required"
+                                data-validation-required-message="Ingrese su Nickname" />
+                            <p class="help-block text-danger"></p>
+                         </div>
+                        <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input class="form-control" id="password" type="password" name="PassUsua"
+                                placeholder="Contraseña " required="required" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <label>Imagen:</label>
+                            <input class="form-control" id="Imagen" name="Imagen" type="file"
+                                placeholder="Ingrese su Imagen *" required="required"
+                                data-validation-required-message="Ingrese su Imagen" />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <p>¿Ya tienes una cuenta?, <a routerLink="login"><b>INICIA SESIÓN</b></a></p>
+                </div>
+                <div class="text-center">
+                    <div id="success"></div>
+                    <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit"
+                        name="BtnGuardar">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <footer class="footer mt-5">
+        <hr>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">
+                    Copyright &copy; Bigedu
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
