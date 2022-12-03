@@ -15,6 +15,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'login/registro',component:RegistroComponent},
   {path:'login/registro/login',component:LoginComponent},
+  {path:'login/registro/login/registro',component:RegistroComponent}
 ];
 
 @NgModule({

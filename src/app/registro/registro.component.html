@@ -1,8 +1,8 @@
 <div class="container ">
     <div class="row">
         <div class="col-md-6 mt-5">
-   <br>
-            <img src="../../assets/img/logo.jpg" width="500" height="300">
+   <br><br><br>
+            <img src="../../assets/img/abiertovolandolibro.jpg" width="500" height="300">
             <div class="text-center">
                 <h2 class="section-heading ">Bigedu</h2>
                 <h3 class=" Mitexto">
@@ -12,25 +12,58 @@
         </div>
         <div class="col-md-6">
 
-            <form class="mt-5 " id="contactForm">
+            <form class="mt-5 " id="contactForm" #UserForm="ngForm" (ngSubmit)="OnSubmit(UserForm)">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-12">
                         <h3>Registro</h3> <br>
                         <div class="form-group">
-                            <label>Nickname:</label>
-                            <input class="form-control" id="Nickname" type="text" name="Nickname"
-                                placeholder="Nickname" required="required"
+                            <!-- <label>Nickname:</label> -->
+                            <input class="form-control" name="Nickname" #Nickname="ngModel" [(ngModel)]="user.nickname" type="text" 
+                                placeholder="Nickname" required="required" autocomplete="Nickname"
                                 data-validation-required-message="Ingrese su Nickname" />
                             <p class="help-block text-danger"></p>
                          </div>
+                         <div class="form-group">
+                            <input class="form-control" name="tipouser" #tipouser="ngModel" [(ngModel)]="user.tipouser" type="text" name="tipouser"
+                                placeholder="Tipo de usuario" required="required"  autocomplete="tipouser"
+                                data-validation-required-message="Ingrese su Tipo de usuario" />
+                            <p class="help-block text-danger"></p>
+                         </div>
+                         <div class="form-group">
+                            <!-- <label>Numero de Identificacion:</label> -->
+                            <input class="form-control" name="idenuser" #IdenUser="ngModel" [(ngModel)]="user.idenuser" type="text" 
+                                placeholder="Numero de Identificacion" required="required"
+                                data-validation-required-message="Ingrese su Numero de Identificacion" />
+                            <p class="help-block text-danger"></p>
+                         </div>
+                         <div class="form-group">
+                            <input class="form-control" name="primenom" #primenom="ngModel"  [(ngModel)]="user.primenom" type="text"
+                                placeholder="Nombre" required="required"
+                                data-validation-required-message="Ingrese su Nombre" />
+                            <p class="help-block text-danger"></p>
+                         </div>
+                         <div class="form-group">
+                            <!-- <label>Apellido:</label> -->
+                            <input class="form-control"name="primeape"  #primeape="ngModel" [(ngModel)]="user.primeape" type="text"
+                                placeholder="Apellido" required="required"
+                                data-validation-required-message="Ingrese su Apellido" />
+                            <p class="help-block text-danger"></p>
+                         </div>
+                         <div class="form-group">
+                            <!-- <label>Apellido:</label> -->
+                            <input class="form-control" name="email" #email="ngModel" [(ngModel)]="user.email" type="email"
+                                placeholder="Email" required="required"
+                                data-validation-required-message="Ingrese su Email"   autocomplete="email"/>
+                            <p class="help-block text-danger"></p>
+                         </div>
                         <div class="form-group">
-                            <label>Contraseña:</label>
-                            <input class="form-control" id="password" type="password" name="PassUsua"
-                                placeholder="Contraseña " required="required" />
+                            <!-- <label>Contraseña:</label> -->
+                            <input class="form-control" name="PassUser" #PassUser="ngModel" [(ngModel)]="user.passuser" type="password"
+                                placeholder="Contraseña " required="required"  autocomplete="current-password" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="form-group">
-                            <label>Imagen:</label>
+                            <!-- <label>Imagen:</label> -->
                             <input class="form-control" id="Imagen" name="Imagen" type="file"
                                 placeholder="Ingrese su Imagen *" required="required"
                                 data-validation-required-message="Ingrese su Imagen" />
@@ -60,3 +93,58 @@
         </div>
     </footer>
 </div>
+
+
+
+<!------------------------------------------------------------------------------------------->
+<!-- <div class="central">
+    <div class="container">
+    <h2>{{title}}</h2>
+    <form #projectForm="ngForm" (ngSubmit)="OnSubmit(projectForm)">
+     <p>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+        <span *ngIf="name.touched && !name.valid">
+         El nombre es obligatorio
+        </span>
+     </p><p>
+        <label for="Description">Descripcion</label>
+        <input type="text" name="Description" #Description="ngModel" [(ngModel)]="project.description" required>
+        <span *ngIf="Description.touched && !Description.valid">
+         La Descripcion es obligatorio
+        </span>
+     </p>
+     <p>
+        <label for="category">Categoria</label>
+        <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+        <span *ngIf="category.touched && !category.valid">
+         La Categoria es obligatorio
+        </span>
+     </p>
+     <p>
+        <label for="year">año</label>
+        <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required >
+        <span *ngIf="year.touched && !year.valid">
+         La año es obligatorio
+        </span>
+     </p>
+     <p>
+        <label for="langs">Lenguajes</label>
+        <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+        <span *ngIf="langs.touched && !langs.valid">
+         Los Lenguajes son obligatorios
+        </span>
+     </p>
+     <p>
+        <label for="image">Imagen</label>
+        <input type="file" name="image" placeholder="subir imagen" (change)="uploadImage($event)">
+      </p> 
+     
+     <button type="submit" class=" btn btn-primary" [disabled]="!projectForm.form.valid">Enviar</button>
+     
+      </form>
+</div>
+</div>
+<footer>
+    contacto : alfonso.adamer@gmail.com
+</footer> -->
