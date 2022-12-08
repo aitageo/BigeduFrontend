@@ -70,14 +70,15 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                    <p>¿Ya tienes una cuenta?, <a routerLink="login"><b>INICIA SESIÓN</b></a></p>
                 </div>
+                <p>¿Todavía no tienes una cuenta?, <a routerLink="login" (click)="backLogin()"><b>INICIA SESIÓN</b></a></p>
                 <div class="text-center">
-                    <div id="success"></div>
                     <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit"
                         name="BtnGuardar">Registrar</button>
                 </div>
             </form>
+            <div>
+        </div>
         </div>
     </div>
 

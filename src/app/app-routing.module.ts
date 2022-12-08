@@ -13,9 +13,9 @@ const routes: Routes = [
   {path:'nosotros',component:NosotrosComponent},
   {path:'contactenos',component:ContactenosComponent},
   {path:'login',component:LoginComponent},
-  {path:'login/registro',component:RegistroComponent},
-  {path:'login/registro/login',component:LoginComponent},
-  {path:'login/registro/login/registro',component:RegistroComponent}
+  {path:'registro',component:RegistroComponent}
+  // {path:'login/registro/login',component:LoginComponent},
+  // {path:'login/registro/login/registro',component:RegistroComponent}
 ];
 
 @NgModule({

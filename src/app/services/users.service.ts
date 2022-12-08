@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Login, Users } from '../models/users';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { global } from './global';
-import { application } from 'express';
+import { application, response } from 'express';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -29,7 +29,7 @@ Login(login:Login):Observable<any>{
   let params = JSON.stringify(login);
   let headers = new HttpHeaders().set('Content-Type','application/json');
 
-  return this._http.post(this.url+'/usuario/login',params,{headers:headers})
+  return this._http.post(this.url+'/usuario/login/',params,{headers:headers})
 }
 
   

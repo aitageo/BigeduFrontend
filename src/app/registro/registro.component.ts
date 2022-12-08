@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { Users } from '../models/users';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -11,7 +12,7 @@ export class RegistroComponent implements OnInit {
     public title:string;
     public user:Users;
 
-  constructor(private _UserService:UsersService) { 
+  constructor(private _UserService:UsersService,private router:Router) { 
        this.title = "Nuevo usuario";
        this.user = new Users('','','','','','','');
   }
@@ -32,6 +33,10 @@ export class RegistroComponent implements OnInit {
     )
     
 
+  }//
+
+  backLogin(){
+   this.router.navigate(['login'])
   }
 
 }
