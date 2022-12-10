@@ -11,6 +11,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactenosComponent } from './contactenos/contactenos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -21,7 +22,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     HomeComponent,
     NosotrosComponent,
     ContactenosComponent,
-    RegistroComponent
+    RegistroComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

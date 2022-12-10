@@ -5,6 +5,7 @@ import { ContactenosComponent } from './contactenos/contactenos.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { RegistroComponent } from './registro/registro.component';
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'nosotros',component:NosotrosComponent},
   {path:'contactenos',component:ContactenosComponent},
   {path:'login',component:LoginComponent},
-  {path:'registro',component:RegistroComponent}
+  {path:'registro',component:RegistroComponent},
+  {path:'**',component:NotFoundComponent}
   // {path:'login/registro/login',component:LoginComponent},
   // {path:'login/registro/login/registro',component:RegistroComponent}
 ];
