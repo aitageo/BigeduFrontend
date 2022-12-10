@@ -1,4 +1,27 @@
+.container {
+    margin-left: 10rem;
+}
+
 .team-member{
-    margin: auto;
     margin-left: 4.5rem;
 }
+
+ h4  {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+p {
+    margin-left: 4.5rem;
+    margin-top: 1rem;
+}
+
+#member4{
+    margin-left: 5rem;
+}
+
+#member4 p {
+    margin: auto;
+
+}
+

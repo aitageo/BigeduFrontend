@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { Users } from '../models/users';
 import { Route, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registro',
@@ -22,6 +23,11 @@ export class RegistroComponent implements OnInit {
 
   OnSubmit(form:any){
     console.log(this.user);
+    Swal.fire(
+      'Muy Bien',
+      'Registro Exitoso',
+      'success'
+    )
     this._UserService.saveUser(this.user).subscribe(
       response =>{
         console.log(response);

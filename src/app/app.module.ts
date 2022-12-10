@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ContactenosComponent } from './contactenos/contactenos.component';
 import { RegistroComponent } from './registro/registro.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,7 @@ import { RegistroComponent } from './registro/registro.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
