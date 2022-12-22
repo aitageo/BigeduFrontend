@@ -12,6 +12,7 @@ import { ContactenosComponent } from './contactenos/contactenos.component';
 import { RegistroComponent } from './registro/registro.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FechaPipe } from './fecha.pipe';
 
 
 
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NosotrosComponent,
     ContactenosComponent,
     RegistroComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FechaPipe
   ],
   imports: [
     BrowserModule,

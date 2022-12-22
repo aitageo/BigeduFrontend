@@ -16,6 +16,7 @@
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-12">
                         <h3>Registro</h3> <br>
+                         <p>{{date}}</p>
                         <div class="form-group">
                             <!-- <label>Nickname:</label> -->
                             <input class="form-control" name="Nickname" #Nickname="ngModel" [(ngModel)]="user.nickname" type="text" 
@@ -74,7 +75,7 @@
                 <p>¿Todavía no tienes una cuenta?, <a routerLink="login" (click)="backLogin()"><b>INICIA SESIÓN</b></a></p>
                 <div class="text-center">
                     <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit"
-                        name="BtnGuardar">Registrar</button>
+                        name="BtnGuardar" [disabled]="!UserForm.form.valid" >Registrar</button>
                 </div>
             </form>
             <div>
