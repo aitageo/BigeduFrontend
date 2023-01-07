@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';//para el two way data (binding banana in box)
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';//para el two way data (binding banana in box)
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 
@@ -32,6 +32,7 @@ import { FechaPipe } from './fecha.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,22 +5,22 @@
             <h2 class="section-heading text-uppercase">Contáctenos</h2>
             
         </div>
-        <form >
+        <form [formGroup]="datos" >
             <div class="row">
                 <div class="col-md-6">
                      <div class="form-group">
                     
-                        <input class="form-control" id="name" type="text" placeholder="Ingrese su Nombre " required="required" data-validation-required-message="Ingrese su Nombre" />
+                        <input class="form-control" id="name" type="email" placeholder="Ingrese su Correo " required="required" data-validation-required-message="Ingrese su Correo"  formControlName="correo"/>
                         <p class="help-block text-danger"></p>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="email" type="email" placeholder="Ingrese su correo electrónico" required="required" data-validation-required-message="Ingrese su correo electrónico" />
+                        <input class="form-control" id="email" type="text" placeholder="Ingrese el asunto" required="required" data-validation-required-message="Ingrese su correo electrónico" formControlName="asunto" />
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-group-textarea mb-md-0">
-                        <textarea class="form-control" id="message" placeholder="Ingrese su mensaje *" required="required" data-validation-required-message="Ingrese su mensaje"></textarea>
+                        <textarea class="form-control" id="message" placeholder="Ingrese su mensaje *" required="required" data-validation-required-message="Ingrese su mensaje" formControlName="mensaje"></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             <div class="text-center">
                 <div id="success"></div>
                 <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit" 
-                (click)="mensaje()">Enviar Mensaje</button>
+                 (click)="envioCorreo()" (click)="mensaje()">Enviar Mensaje</button>
             </div>
         </form>
     </div>
